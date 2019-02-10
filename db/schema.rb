@@ -27,6 +27,20 @@ ActiveRecord::Schema.define(version: 2019_02_10_070637) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "products", force: :cascade do |t|
+    t.integer "genre", null: false
+    t.string "product_name", null: false
+    t.integer "price", null: false
+    t.string "artist_name", null: false
+    t.string "product_image_id"
+    t.string "company", null: false
+    t.integer "stock_quantity", null: false
+    t.boolean "deteled", default: false, null: false
+    t.integer "admin_status", default: 0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "shippings", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
