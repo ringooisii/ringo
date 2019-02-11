@@ -1417,3 +1417,79 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 880ms (Views: 845.5ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 10.0.2.2 at 2019-02-11 10:41:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 2766ms (Views: 2735.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/carts" for 10.0.2.2 at 2019-02-11 10:41:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartsController#index as HTML
+  Rendering carts/index.html.erb within layouts/application
+  Rendered carts/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 558ms (Views: 535.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user" for 10.0.2.2 at 2019-02-11 10:41:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 592ms (Views: 565.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-02-11 10:41:44 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 514ms (Views: 487.3ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for 10.0.2.2 at 2019-02-11 10:41:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ajrn+3QLdZTO45Ri1MVm/s2quz3qbjk9g8lhW6cdbNIZkrrvZbJoU78SwJkQqiENB8zzdRgloI31Iy1nGDPM4Q=="}
+Redirected to http://localhost:3000/
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 302 Found in 25ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-02-11 10:41:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 726ms (Views: 700.1ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for 10.0.2.2 at 2019-02-11 10:41:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8LJt4KldCXTkVHUhpAxuDvLxlcTBP1OXdBGvI0m7+vKDGjD0uOQUs5WlIdpgYyn9OJfdjDN0yicC++Mf9pVawQ=="}
+Redirected to http://localhost:3000/
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-02-11 10:41:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 623ms (Views: 598.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-02-11 10:42:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 477ms (Views: 455.0ms | ActiveRecord: 0.0ms)
+
+
