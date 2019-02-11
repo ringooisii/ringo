@@ -10,20 +10,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_10_084320) do
+ActiveRecord::Schema.define(version: 2019_02_11_044642) do
 
   create_table "carts", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "product_id"
+    t.integer "quantity", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "discs", force: :cascade do |t|
+    t.integer "product_id"
+    t.string "disc_name", null: false
+    t.integer "disc_number", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "order_products", force: :cascade do |t|
+    t.integer "order_id"
+    t.integer "product_id"
+    t.integer "order_quantity", null: false
+    t.integer "order_price", null: false
+    t.string "order_product_image_id"
+    t.string "order_name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-# Could not dump table "orders" because of following StandardError
-#   Unknown type 'varcher' for column 'order_address'
+  create_table "orders", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "order_name", null: false
+    t.string "order_address", null: false
+    t.integer "order_status", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "products", force: :cascade do |t|
     t.integer "genre", null: false
@@ -44,6 +67,14 @@ ActiveRecord::Schema.define(version: 2019_02_10_084320) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "songs", force: :cascade do |t|
+    t.integer "disc_id"
+    t.string "title", null: false
+    t.integer "song_number", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -55,10 +86,17 @@ ActiveRecord::Schema.define(version: 2019_02_10_084320) do
     t.datetime "last_sign_in_at"
     t.string "current_sign_in_ip"
     t.string "last_sign_in_ip"
+    t.string "last_name", null: false
+    t.string "first_name", null: false
+    t.string "last_name_kane", null: false
+    t.string "first_name_kana", null: false
+    t.string "postcode", null: false
+    t.string "address", null: false
+    t.string "phone_number", null: false
+    t.boolean "deteled", default: false, null: false
+    t.integer "admin_status", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "last_name", default: "f", null: false
-    t.string "first_name", default: "f", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
