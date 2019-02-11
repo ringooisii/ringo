@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_10_070637) do
+ActiveRecord::Schema.define(version: 2019_02_10_084320) do
 
   create_table "carts", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -22,10 +22,8 @@ ActiveRecord::Schema.define(version: 2019_02_10_070637) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "orders", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+# Could not dump table "orders" because of following StandardError
+#   Unknown type 'varcher' for column 'order_address'
 
   create_table "products", force: :cascade do |t|
     t.integer "genre", null: false
