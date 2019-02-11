@@ -10,7 +10,7 @@
   </head>
 
   <body>
-  <nav class="navbar navbar-">
+  <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarEexample1">
@@ -19,11 +19,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">RINGO!</a>
+      <%= link_to root_path do %>
+        <%= image_tag "logo.png" %>
+      <% end %>
     </div>
 
     <% if user_signed_in? %>
-
+      <!-- ユーザーがログインしていない時 -->
       <div class="collapse navbar-collapse navbar-right" id="navbarEexample1">
         <ul class="nav navbar-nav">
           <li><%= link_to '新規会員登録', new_user_registration_path %></li>
@@ -33,7 +35,7 @@
       </div>
 
     <% else %>
-
+      <!-- ユーザーがログインしている時 -->
       <div class="collapse navbar-collapse navbar-right" id="navbarEexample1">
         <ul class="nav navbar-nav">
           <li><%= link_to 'カート', carts_path %></li>
@@ -43,6 +45,7 @@
       </div>
 
     <% end %>
+
   </div>
 </nav>
     <%= yield %>
