@@ -3332,6 +3332,489 @@ Processing by ShippingsController#create as HTML
   [1m[36mShipping Create (7.7ms)[0m  [1m[32mINSERT INTO "shippings" ("shipping_address", "shipping_postcode", "shipping_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["shipping_address", "ウンウン"], ["shipping_postcode", "233-1222"], ["shipping_name", "nose"], ["created_at", "2019-02-12 06:44:04.268501"], ["updated_at", "2019-02-12 06:44:04.268501"]]
   ↳ app/controllers/shippings_controller.rb:8
   [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+<<<<<<< HEAD
+  ↳ bin/rails:9
+Migrating to CreateProducts (20190210062219)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "genre" integer NOT NULL, "product_name" varchar NOT NULL, "price" integer NOT NULL, "artist_name" varchar NOT NULL, "product_image_id" varchar, "company" varchar NOT NULL, "stock_quantity" integer NOT NULL, "deteled" boolean DEFAULT 0 NOT NULL, "admin_status" integer DEFAULT 0, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190210062219_create_products.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190210062219"]]
+  ↳ bin/rails:9
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateShippings (20190210063452)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "shippings" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "shipping_address" integer NOT NULL, "shipping_postcode" varchar NOT NULL, "shipping_name" varchar NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190210063452_create_shippings.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190210063452"]]
+  ↳ bin/rails:9
+  [1m[35m (7.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateOrders (20190210064903)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "order_name" varchar NOT NULL, "order_address" varchar NOT NULL, "order_status" integer NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190210064903_create_orders.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190210064903"]]
+  ↳ bin/rails:9
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateOrderProducts (20190210070637)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "order_products" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "order_id" integer, "product_id" integer, "order_quantity" integer NOT NULL, "order_price" integer NOT NULL, "order_product_image_id" varchar, "order_name" varchar NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190210070637_create_order_products.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190210070637"]]
+  ↳ bin/rails:9
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateDiscs (20190211044636)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "discs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "product_id" integer, "disc_name" varchar NOT NULL, "disc_number" integer NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190211044636_create_discs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190211044636"]]
+  ↳ bin/rails:9
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateSongs (20190211044642)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE TABLE "songs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "disc_id" integer, "title" varchar NOT NULL, "song_number" integer NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190211044642_create_songs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (2.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190211044642"]]
+  ↳ bin/rails:9
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (5.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-02-11 10:00:56.657568"], ["updated_at", "2019-02-11 10:00:56.657568"]]
+  ↳ bin/rails:9
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-11 10:09:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Admin::ProductsController#new as HTML
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 3175ms (Views: 3116.6ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-11 10:10:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProductsController#new as HTML
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 902ms (Views: 871.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-11 10:10:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProductsController#new as HTML
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 647ms (Views: 617.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-11 10:11:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProductsController#new as HTML
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 832ms (Views: 807.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-11 10:15:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProductsController#new as HTML
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 771ms (Views: 736.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-11 10:15:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProductsController#new as HTML
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 826ms (Views: 786.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-11 10:18:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProductsController#new as HTML
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 982ms (Views: 935.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-11 10:18:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProductsController#new as HTML
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 947ms (Views: 893.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-11 10:18:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProductsController#new as HTML
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 751ms (Views: 717.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-11 10:18:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProductsController#new as HTML
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 660ms (Views: 614.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-11 10:19:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProductsController#new as HTML
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 817ms (Views: 782.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-11 10:19:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProductsController#new as HTML
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 905ms (Views: 858.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-11 10:21:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProductsController#new as HTML
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 951ms (Views: 900.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-11 10:25:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProductsController#new as HTML
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 795ms (Views: 749.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-11 10:26:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProductsController#new as HTML
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 857ms (Views: 802.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-11 10:26:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProductsController#new as HTML
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 704ms (Views: 653.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-11 10:26:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProductsController#new as HTML
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 853ms (Views: 812.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-11 10:27:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProductsController#new as HTML
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 644ms (Views: 620.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-11 10:27:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProductsController#new as HTML
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 909ms (Views: 869.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-11 10:29:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProductsController#new as HTML
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 1033ms (Views: 977.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-11 10:32:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProductsController#new as HTML
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 800ms (Views: 751.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-11 10:34:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProductsController#new as HTML
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 924ms (Views: 872.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-11 10:34:44 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProductsController#new as HTML
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 831ms (Views: 797.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-11 10:34:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProductsController#new as HTML
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 1030ms (Views: 971.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-11 10:38:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProductsController#new as HTML
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 876ms (Views: 832.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-11 10:44:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProductsController#new as HTML
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 782ms (Views: 737.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-12 03:22:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Admin::ProductsController#new as HTML
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/new.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 3795ms (Views: 3698.7ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-12 03:23:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProductsController#new as HTML
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 833ms (Views: 801.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-12 03:29:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProductsController#new as HTML
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 670ms (Views: 637.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-12 03:29:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProductsController#new as HTML
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 683ms (Views: 650.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-12 03:30:44 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProductsController#new as HTML
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 673ms (Views: 636.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-12 03:32:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProductsController#new as HTML
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 659ms (Views: 624.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-12 03:33:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProductsController#new as HTML
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 993ms (Views: 953.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-12 03:43:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProductsController#new as HTML
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 813ms (Views: 776.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-12 03:47:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProductsController#new as HTML
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 768ms (Views: 724.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-12 03:51:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProductsController#new as HTML
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 694ms (Views: 650.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-12 05:02:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  
+SyntaxError (/vagrant/ringo/app/controllers/admin/products_controller.rb:8: syntax error, unexpected ':', expecting ')'
+...quire(:product).permit(:genre :product_name, :price, :artist...
+...                              ^
+/vagrant/ringo/app/controllers/admin/products_controller.rb:8: syntax error, unexpected ',', expecting &. or :: or '[' or '.'
+...t(:genre :product_name, :price, :artist_name, :product_image...
+...                              ^):
+  
+app/controllers/admin/products_controller.rb:8: syntax error, unexpected ':', expecting ')'
+app/controllers/admin/products_controller.rb:8: syntax error, unexpected ',', expecting &. or :: or '[' or '.'
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-12 05:05:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Admin::ProductsController#new as HTML
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/new.html.erb within layouts/application (233.9ms)
+Completed 200 OK in 10525ms (Views: 10438.6ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-12 05:08:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProductsController#new as HTML
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 740ms (Views: 697.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-12 05:16:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProductsController#new as HTML
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/new.html.erb within layouts/application (37.7ms)
+Completed 200 OK in 724ms (Views: 697.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-12 06:29:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProductsController#new as HTML
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/new.html.erb within layouts/application (62.6ms)
+Completed 500 Internal Server Error in 152ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `disc_name' for #<Product:0x00007ff399b01ac8>):
+    31: 					</p>
+    32: 					<div class="form-group form-inline">
+    33: 						<%= f.label :ディスク %>
+    34: 						<%= f.text_field :disc_name, class: "form-control" %>
+    35: 						<%= f.label :曲 %>
+    36: 						<%= f.text_field :title, class: "form-control" %>
+    37: 					</div>
+  
+app/views/admin/products/new.html.erb:34:in `block in _app_views_admin_products_new_html_erb___877727044973322497_70342116114580'
+app/views/admin/products/new.html.erb:7:in `_app_views_admin_products_new_html_erb___877727044973322497_70342116114580'
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-12 07:40:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Admin::ProductsController#new as HTML
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 3.4ms)
+
+
+  
+NoMethodError (undefined method `accepts_nested_attrbutes_for' for #<Class:0x0000561fd35e0d50>):
+  
+app/models/product.rb:4:in `<class:Product>'
+app/models/product.rb:1:in `<main>'
+app/controllers/admin/products_controller.rb:3:in `new'
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-12 07:43:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Admin::ProductsController#new as HTML
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/new.html.erb within layouts/application (116.0ms)
+Completed 500 Internal Server Error in 285ms (ActiveRecord: 9.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `disc_name' for #<Product:0x00007f10b03fa558>):
+    31: 					</p>
+    32: 				<!--	<div class="form-group form-inline">
+    33: 						<%= f.label :ディスク %>
+    34: 						<%= f.text_field :disc_name, class: "form-control" %>
+    35: 						<%= f.label :曲 %>
+    36: 						<%= f.text_field :title, class: "form-control" %>
+    37: 					</div> -->
+  
+app/views/admin/products/new.html.erb:34:in `block in _app_views_admin_products_new_html_erb__2703213108265499233_69854827003820'
+app/views/admin/products/new.html.erb:7:in `_app_views_admin_products_new_html_erb__2703213108265499233_69854827003820'
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-12 07:48:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProductsController#new as HTML
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 10495ms (Views: 10459.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-12 07:49:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Admin::ProductsController#new as HTML
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 6.4ms)
+
+
+  
+NoMethodError (undefined method `discs' for #<Product:0x00007f701c38b628>):
+  
+app/controllers/admin/products_controller.rb:4:in `new'
+Started GET "/admin/products/new" for 10.0.2.2 at 2019-02-12 07:49:44 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Admin::ProductsController#new as HTML
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/new.html.erb within layouts/application (82.8ms)
+Completed 200 OK in 2997ms (Views: 2935.2ms | ActiveRecord: 7.3ms)
+=======
   ↳ app/controllers/shippings_controller.rb:8
 Redirected to http://localhost:3000/orders
 Completed 302 Found in 24ms (ActiveRecord: 13.2ms)
@@ -3399,5 +3882,6 @@ Processing by ProductsController#index as HTML
   Rendering products/index.html.erb within layouts/application
   Rendered products/index.html.erb within layouts/application (0.4ms)
 Completed 200 OK in 456ms (Views: 423.0ms | ActiveRecord: 0.0ms)
+>>>>>>> master
 
 
