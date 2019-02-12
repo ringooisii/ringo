@@ -1,1 +1,39 @@
-<h1>admin users show画面</h1>
+<div class="cotainer">
+	<div class="row">
+		<div class="col-md-4" style="background-color: orange">
+			<h1>登録者 詳細情報</h1>
+			<table class="table">
+				<thead>
+					<tr><th>登録者 ID：</th><td><%= @user.id %></td><th>苗字：</th><td><%= @user.first_name %></td></tr>
+					<tr><th>名前：</th><td><%= @user.last_name %></td></tr>
+					<tr><th>郵便番号：</th><td><%= @user.postcode %></td></tr>
+					<tr><th>住所：</th><td><%= @user.address %></td></tr>
+					<tr><th>メールアドレス：</th><td><%= @user.email %></td></tr>
+					<tr><th>電話番号：</th><td><%= @user.phone_number %></td></tr>
+				</thead>
+			</table>
+			<div>
+				<%= link_to '編集', edit_admin_user_path(@user.id) %>
+			</div>
+		</div>
+		<div class="col-md-8" style="background-color: green">
+			<h1>登録者 購入履歴</h1>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>注文番号</th>
+						<th>配送状況</th>
+						<th>配送先</th>
+						<th>注文詳細</th>
+						<th>購入日時</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>data</td>
+					</tr>
+				</tbody>
+			</table>
+
+	</div>
+</div>

@@ -1734,3 +1734,442 @@ Migrating to CreateSongs (20190211044642)
   [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
 >>>>>>> master
+Started GET "/" for 10.0.2.2 at 2019-02-12 03:31:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (5.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (6.6ms)
+Started GET "/" for 10.0.2.2 at 2019-02-12 03:31:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 15407ms (Views: 15347.9ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 12289ms (Views: 12199.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/users" for 10.0.2.2 at 2019-02-12 03:32:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::UsersController#index as HTML
+  Rendering admin/users/index.html.erb within layouts/application
+  Rendered admin/users/index.html.erb within layouts/application (43.0ms)
+Completed 500 Internal Server Error in 137ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial users/_kari with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/vagrant/ringo/app/views"
+  * "/var/lib/gems/2.5.0/gems/devise-4.6.0/app/views"
+):
+    1: <%= render 'users/kari' %>
+  
+app/views/admin/users/index.html.erb:1:in `_app_views_admin_users_index_html_erb__198214784606222332_69989621697480'
+Started GET "/admin/users" for 10.0.2.2 at 2019-02-12 03:32:44 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::UsersController#index as HTML
+  Rendering admin/users/index.html.erb within layouts/application
+  Rendered admin/users/_kari.html.erb (1.7ms)
+  Rendered admin/users/index.html.erb within layouts/application (44.1ms)
+Completed 500 Internal Server Error in 207ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/vagrant/ringo/app/views/admin/users/_kari.html.erb:28: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/admin/users/_kari.html.erb:28: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/admin/users/index.html.erb:1:in `_app_views_admin_users_index_html_erb__198214784606222332_69989617995540'
+Started GET "/admin/users" for 10.0.2.2 at 2019-02-12 03:39:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::UsersController#index as HTML
+  Rendering admin/users/index.html.erb within layouts/application
+  Rendered admin/users/_kari.html.erb (20.7ms)
+  Rendered admin/users/index.html.erb within layouts/application (52.1ms)
+Completed 200 OK in 891ms (Views: 858.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/users" for 10.0.2.2 at 2019-02-12 03:40:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::UsersController#index as HTML
+  Rendering admin/users/index.html.erb within layouts/application
+  Rendered admin/users/_kari.html.erb (17.4ms)
+  Rendered admin/users/index.html.erb within layouts/application (55.7ms)
+Completed 200 OK in 820ms (Views: 779.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/users" for 10.0.2.2 at 2019-02-12 03:40:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::UsersController#index as HTML
+  Rendering admin/users/index.html.erb within layouts/application
+  Rendered admin/users/_kari.html.erb (18.9ms)
+  Rendered admin/users/index.html.erb within layouts/application (79.0ms)
+Completed 200 OK in 884ms (Views: 853.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/users" for 10.0.2.2 at 2019-02-12 03:40:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::UsersController#index as HTML
+  Rendering admin/users/index.html.erb within layouts/application
+  Rendered admin/users/_kari.html.erb (28.5ms)
+  Rendered admin/users/index.html.erb within layouts/application (90.7ms)
+Completed 200 OK in 1135ms (Views: 1069.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/users" for 10.0.2.2 at 2019-02-12 03:41:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::UsersController#index as HTML
+  Rendering admin/users/index.html.erb within layouts/application
+  Rendered admin/users/_kari.html.erb (25.0ms)
+  Rendered admin/users/index.html.erb within layouts/application (77.1ms)
+Completed 200 OK in 906ms (Views: 867.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/users" for 10.0.2.2 at 2019-02-12 03:41:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::UsersController#index as HTML
+  Rendering admin/users/index.html.erb within layouts/application
+  Rendered admin/users/_kari.html.erb (24.4ms)
+  Rendered admin/users/index.html.erb within layouts/application (76.2ms)
+Completed 200 OK in 1001ms (Views: 939.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/users" for 10.0.2.2 at 2019-02-12 03:42:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::UsersController#index as HTML
+  Rendering admin/users/index.html.erb within layouts/application
+  Rendered admin/users/_kari.html.erb (24.5ms)
+  Rendered admin/users/index.html.erb within layouts/application (86.4ms)
+Completed 200 OK in 1037ms (Views: 996.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/users" for 10.0.2.2 at 2019-02-12 03:42:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::UsersController#index as HTML
+  Rendering admin/users/index.html.erb within layouts/application
+  Rendered admin/users/_kari.html.erb (15.6ms)
+  Rendered admin/users/index.html.erb within layouts/application (53.6ms)
+Completed 200 OK in 879ms (Views: 848.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/products" for 10.0.2.2 at 2019-02-12 03:42:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProductsController#index as HTML
+  Rendering admin/products/index.html.erb within layouts/application
+  Rendered admin/products/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 763ms (Views: 730.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/users" for 10.0.2.2 at 2019-02-12 03:42:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::UsersController#index as HTML
+  Rendering admin/users/index.html.erb within layouts/application
+  Rendered admin/users/_kari.html.erb (19.6ms)
+  Rendered admin/users/index.html.erb within layouts/application (47.1ms)
+Started GET "/admin/users" for 10.0.2.2 at 2019-02-12 03:42:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::UsersController#index as HTML
+  Rendering admin/users/index.html.erb within layouts/application
+  Rendered admin/users/_kari.html.erb (16.7ms)
+  Rendered admin/users/index.html.erb within layouts/application (42.8ms)
+Completed 200 OK in 1467ms (Views: 1442.0ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 794ms (Views: 760.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/users" for 10.0.2.2 at 2019-02-12 03:48:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::UsersController#index as HTML
+  Rendering admin/users/index.html.erb within layouts/application
+  Rendered admin/users/_kari.html.erb (18.4ms)
+  Rendered admin/users/index.html.erb within layouts/application (63.5ms)
+Completed 200 OK in 849ms (Views: 820.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/users" for 10.0.2.2 at 2019-02-12 03:48:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::UsersController#index as HTML
+  Rendering admin/users/index.html.erb within layouts/application
+  Rendered admin/users/_kari.html.erb (21.4ms)
+  Rendered admin/users/index.html.erb within layouts/application (66.9ms)
+Completed 200 OK in 1191ms (Views: 1143.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/users" for 10.0.2.2 at 2019-02-12 03:50:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::UsersController#index as HTML
+  Rendering admin/users/index.html.erb within layouts/application
+  Rendered admin/users/_kari.html.erb (19.6ms)
+  Rendered admin/users/index.html.erb within layouts/application (62.5ms)
+Completed 200 OK in 831ms (Views: 801.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/users" for 10.0.2.2 at 2019-02-12 03:50:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::UsersController#index as HTML
+  Rendering admin/users/index.html.erb within layouts/application
+  Rendered admin/users/_kari.html.erb (24.4ms)
+  Rendered admin/users/index.html.erb within layouts/application (55.9ms)
+Completed 200 OK in 914ms (Views: 873.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/users" for 10.0.2.2 at 2019-02-12 03:51:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::UsersController#index as HTML
+  Rendering admin/users/index.html.erb within layouts/application
+  Rendered admin/users/_kari.html.erb (32.8ms)
+  Rendered admin/users/index.html.erb within layouts/application (81.4ms)
+Completed 200 OK in 1122ms (Views: 1078.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/users" for 10.0.2.2 at 2019-02-12 04:14:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Admin::UsersController#index as HTML
+  Rendering admin/users/index.html.erb within layouts/application
+  Rendered admin/users/index.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 172ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/vagrant/ringo/app/views/admin/users/index.html.erb:33: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^):
+  
+app/views/admin/users/index.html.erb:33: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/admin/users" for 10.0.2.2 at 2019-02-12 04:14:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::UsersController#index as HTML
+  Rendering admin/users/index.html.erb within layouts/application
+  Rendered admin/users/_kari.html.erb (1595.9ms)
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:18
+  Rendered admin/users/index.html.erb within layouts/application (1642.9ms)
+Completed 200 OK in 3470ms (Views: 3428.7ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/admin/users" for 10.0.2.2 at 2019-02-12 04:19:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::UsersController#index as HTML
+  Rendering admin/users/index.html.erb within layouts/application
+  Rendered admin/users/_kari.html.erb (15.5ms)
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:18
+  Rendered admin/users/index.html.erb within layouts/application (55.6ms)
+Completed 200 OK in 875ms (Views: 841.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/admin/users" for 10.0.2.2 at 2019-02-12 04:41:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::UsersController#index as HTML
+  Rendering admin/users/index.html.erb within layouts/application
+  Rendered admin/users/_kari.html.erb (28.9ms)
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:18
+  Rendered admin/users/index.html.erb within layouts/application (77.5ms)
+Completed 200 OK in 1046ms (Views: 1002.1ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-02-12 04:41:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 1081ms (Views: 1044.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/users/1" for 10.0.2.2 at 2019-02-12 04:41:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering admin/users/show.html.erb within layouts/application
+  Rendered admin/users/show.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/vagrant/ringo/app/views/admin/users/show.html.erb:25: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^):
+  
+app/views/admin/users/show.html.erb:25: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/admin/users/1" for 10.0.2.2 at 2019-02-12 04:41:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering admin/users/show.html.erb within layouts/application
+  Rendered admin/users/show.html.erb within layouts/application (30.0ms)
+Completed 500 Internal Server Error in 126ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    4: 			<h1>登録者 詳細情報</h1>
+    5: 			<table>
+    6: 				<thead>
+    7: 					<% @user.each do |user| %>
+    8: 					<tr>
+    9: 						<th>登録者 ID：</th><td><%= user.id %></td>
+   10: 						<th>苗字：</th><td><%= user.first_name %></td>
+  
+app/views/admin/users/show.html.erb:7:in `_app_views_admin_users_show_html_erb__2697294295076707480_69916170988660'
+Started GET "/admin/users/1" for 10.0.2.2 at 2019-02-12 04:42:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering admin/users/show.html.erb within layouts/application
+  Rendered admin/users/show.html.erb within layouts/application (39.7ms)
+Completed 500 Internal Server Error in 196ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+     5: 			<table>
+     6: 				<thead>
+     7: 					<tr>
+     8: 						<th>登録者 ID：</th><td><%= @user.id %></td>
+     9: 						<th>苗字：</th><td><%= @user.first_name %></td>
+    10: 						<th>名前：</th><td><%= @user.last_name %></td>
+    11: 						<th>郵便番号：</th><td><%= @user.postcode %></td>
+  
+app/views/admin/users/show.html.erb:8:in `_app_views_admin_users_show_html_erb__2697294295076707480_69916175959880'
+Started GET "/admin/users/1" for 10.0.2.2 at 2019-02-12 04:52:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering admin/users/show.html.erb within layouts/application
+  Rendered admin/users/show.html.erb within layouts/application (45.5ms)
+Completed 500 Internal Server Error in 188ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `first_name' for nil:NilClass):
+     6: 				<thead>
+     7: 					<tr>
+     8: 						<th>登録者 ID：</th><td><%= @user %></td>
+     9: 						<th>苗字：</th><td><%= @user.first_name %></td>
+    10: 						<th>名前：</th><td><%= @user.last_name %></td>
+    11: 						<th>郵便番号：</th><td><%= @user.postcode %></td>
+    12: 						<th>住所：</th><td><%= @user.address %></td>
+  
+app/views/admin/users/show.html.erb:9:in `_app_views_admin_users_show_html_erb__2697294295076707480_69916178155940'
+Started GET "/admin/users/1" for 10.0.2.2 at 2019-02-12 04:53:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering admin/users/show.html.erb within layouts/application
+  Rendered admin/users/show.html.erb within layouts/application (33.6ms)
+Completed 500 Internal Server Error in 171ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+     5: 			<table>
+     6: 				<thead>
+     7: 					<tr>
+     8: 						<th>登録者 ID：</th><td><%= @user.id %></td>
+     9: 						<th>苗字：</th><td><%= @user.first_name %></td>
+    10: 						<th>名前：</th><td><%= @user.last_name %></td>
+    11: 						<th>郵便番号：</th><td><%= @user.postcode %></td>
+  
+app/views/admin/users/show.html.erb:8:in `_app_views_admin_users_show_html_erb__2697294295076707480_47322064521680'
+  [1m[36mUser Load (7.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/admin/users/1" for 10.0.2.2 at 2019-02-12 05:02:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  
+SyntaxError (/vagrant/ringo/app/controllers/admin/users_controller.rb:20: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/admin/users_controller.rb:20: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/admin/users/1" for 10.0.2.2 at 2019-02-12 05:02:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:8
+Completed 404 Not Found in 35ms (ActiveRecord: 8.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  
+app/controllers/admin/users_controller.rb:8:in `show'
+Started GET "/admin/users/1" for 10.0.2.2 at 2019-02-12 05:10:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:8
+Completed 404 Not Found in 32ms (ActiveRecord: 14.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  
+app/controllers/admin/users_controller.rb:8:in `show'
+Started GET "/admin/users/1" for 10.0.2.2 at 2019-02-12 05:11:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering admin/users/show.html.erb within layouts/application
+  Rendered admin/users/show.html.erb within layouts/application (32.6ms)
+Completed 500 Internal Server Error in 158ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    16: 				</thead>
+    17: 			</table>
+    18: 			<div>
+    19: 				<%= link_to '編集', edit_admin_user_path(@user.id) %>
+    20: 			</div>
+    21: 		</div>
+    22: 	</div>
+  
+app/views/admin/users/show.html.erb:19:in `_app_views_admin_users_show_html_erb__3326163533015588454_47226161957540'
+Started GET "/admin/users/1" for 10.0.2.2 at 2019-02-12 05:11:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering admin/users/show.html.erb within layouts/application
+  Rendered admin/users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3965ms (Views: 3919.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/users/1" for 10.0.2.2 at 2019-02-12 05:12:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering admin/users/show.html.erb within layouts/application
+  Rendered admin/users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 878ms (Views: 837.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/users/1" for 10.0.2.2 at 2019-02-12 05:45:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:8
+Completed 404 Not Found in 32ms (ActiveRecord: 10.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  
+app/controllers/admin/users_controller.rb:8:in `show'
