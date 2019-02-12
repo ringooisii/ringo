@@ -64,7 +64,7 @@ ActiveRecord::Schema.define(version: 2019_02_11_044642) do
 
   create_table "shippings", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "shipping_address", null: false
+    t.string "shipping_address", null: false
     t.string "shipping_postcode", null: false
     t.string "shipping_name", null: false
     t.datetime "created_at", null: false
